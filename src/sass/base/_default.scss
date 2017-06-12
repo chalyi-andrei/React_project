@@ -1,0 +1,223 @@
+html,
+body,
+#app,
+.full-height {
+  height: 100%;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background: $color-bg;
+  min-width: 1024px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+*:focus {
+  outline: none !important
+}
+
+a {
+  text-decoration: none;
+  color: $color-primary;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.hidden {
+  display: none;
+}
+
+.full-width{
+  width: 100%;
+}
+
+.half-width{
+  width: 50%;
+}
+
+.relative {
+  position: relative;
+}
+
+.scroll-content {
+  overflow: auto;
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $color-dark-gray-3;
+  }
+}
+
+//margin && padding custom classes ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+$spaceamounts: (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50);
+
+@mixin generate-margin-base() {
+  @each $space in $spaceamounts {
+    .m-#{$space} {
+      margin: #{$space}px;
+    }
+  }
+}
+
+@mixin generate-margin-bottom() {
+  @each $space in $spaceamounts {
+    .mb-#{$space} {
+      margin-bottom: #{$space}px;
+    }
+  }
+}
+
+@mixin generate-margin-right() {
+  @each $space in $spaceamounts {
+    .mr-#{$space} {
+      margin-right: #{$space}px;
+    }
+  }
+}
+
+@mixin generate-margin-top() {
+  @each $space in $spaceamounts {
+    .mt-#{$space} {
+      margin-top: #{$space}px;
+    }
+  }
+}
+
+@mixin generate-padding-base() {
+  @each $space in $spaceamounts {
+    .p-#{$space} {
+      padding: #{$space}px;
+    }
+  }
+}
+
+@mixin generate-padding-left() {
+  @each $space in $spaceamounts {
+    .pl-#{$space} {
+      padding-left: #{$space}px;
+    }
+  }
+}
+
+@mixin generate-padding-top() {
+  @each $space in $spaceamounts {
+    .pt-#{$space} {
+      padding-top: #{$space}px;
+    }
+  }
+}
+
+@mixin generate-padding-bottom() {
+  @each $space in $spaceamounts {
+    .pb-#{$space} {
+      padding-bottom: #{$space}px;
+    }
+  }
+}
+
+@mixin generate-padding-right() {
+  @each $space in $spaceamounts {
+    .pr-#{$space} {
+      padding-right: #{$space}px;
+    }
+  }
+}
+
+@include generate-margin-base();
+@include generate-margin-bottom();
+@include generate-margin-right();
+@include generate-margin-top();
+
+@include generate-padding-base();
+@include generate-padding-left();
+@include generate-padding-right();
+@include generate-padding-bottom();
+@include generate-padding-top();
+
+// generate font-sizes ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+$fontsizes: (12, 13, 14, 16, 18, 20, 24, 30, 36, 42);
+
+@mixin generate-font-sizes() {
+  @each $size in $fontsizes {
+    .size-#{$space} {
+      font-size: #{$size}px;
+    }
+  }
+}
+
+@include generate-font-sizes();
+
+//generate heights ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+$spaceamounts: (30, 35, 40, 50, 100, 150, 250, 400, 600);
+
+@mixin generate-height-base() {
+  @each $space in $spaceamounts {
+    .height-#{$space} {
+      height: #{$space}px;
+    }
+  }
+}
+@include generate-height-base();
+
+//Contextual backgrounds ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+.bg-success,
+.bg-warning,
+.bg-danger {
+  padding: ($space / 3) ($space / 2);
+  border-radius: 3px;
+  @include font-size(14px);
+  width: 100%;
+  margin: $space 0;
+}
+
+.bg-success {
+  background: $color-grass-1;
+  color: $color-typo;
+}
+
+.bg-warning {
+  background: $color-sunflower-1;
+  color: $color-typo;
+}
+
+.bg-danger {
+  background: $color-danger;
+  color: $color-white;
+}
+
+//checkboxes ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+.checkbox--mint svg {
+  fill: $color-mint-3 !important;
+}
+.checkbox--lavender svg {
+  fill: $color-lavender-3 !important;
+}
+.checkbox--blue svg {
+  fill: $color-blue-3 !important;
+}
+
+.pointer {
+  cursor: pointer;
+}

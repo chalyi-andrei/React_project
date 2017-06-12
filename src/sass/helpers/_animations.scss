@@ -1,0 +1,106 @@
+@keyframes spin {
+  100% {  transform: rotate(359deg); }
+}
+
+@keyframes showModal {
+  0% {
+	-webkit-transform: translateY(20%);
+	-moz-transform: translateY(20%);
+	-ms-transform: translateY(20%);
+	transform: translateY(20%);
+	opacity: 0;
+  }
+  100% {
+	-webkit-transform: translateY(0);
+	-moz-transform: translateY(0);
+	-ms-transform: translateY(0);
+	transform: translateY(0);
+	opacity: 1;
+  }
+}
+
+@keyframes hideModal {
+  0% {
+	opacity: 1;
+  }
+  100% {
+	-webkit-transform: translateY(20%);
+	-moz-transform: translateY(20%);
+	-ms-transform: translateY(20%);
+	transform: translateY(20%);
+	opacity: 0;
+  }
+}
+
+
+@keyframes lightAnimationA {
+    0% {
+      transform: rotate(0);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+}
+@keyframes lightAnimationB {
+    0% {
+      transform: rotate(0);
+    }
+    50% {
+      transform: rotate(-10deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+}
+@keyframes cloudAnimationA {
+  0% {
+    transform: translate(0px);
+  }
+  50% {
+    transform: translate(20px, 4px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}
+@keyframes cloudAnimationB {
+  0% {
+    transform: translate(0px);
+  }
+  50% {
+    transform: translate(15px, -3px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}
+@keyframes cloudAnimationC {
+  0% {
+    transform: translate(0px);
+  }
+  50% {
+    transform: translate(-30px, -6px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

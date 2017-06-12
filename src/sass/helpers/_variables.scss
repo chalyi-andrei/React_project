@@ -1,0 +1,111 @@
+/************************
+Font
+************************/
+
+$main-font: 'Open Sans', sans-serif;
+
+/************************
+Cards
+************************/
+$card-bg: $color-white;
+$card-border-radius: 8px;
+$card-default-bg: #e8e8e8;
+$card-header: $color-blue-2;
+$card-page-border-radius: 10px;
+$color-card-label: $color-light-gray-3;
+
+/************************
+Space - The grid works with rem
+************************/
+$space: 1.25rem;
+
+/************************
+Header
+************************/
+$header-height: 50px;
+$header-logo: 150px;
+$header-index: 100;
+
+/************************
+Menu
+************************/
+$menu-trigger-height: 18px;
+$menu-trigger-width: 18px;
+$menu-trigger-line-height: 1px;
+$menu-mobile-min-width: 275px;
+$menu-border: 1px solid rgba($color-white, 0.2);
+
+/************************
+z-loader
+************************/
+$zindex: 1000;
+$zindex-higher: 1060;
+$zindex-super-higher: 1090;
+$zindex-menu: 1220;
+$zindex-submenu: 1240;
+$zindex-overlay: 2090;
+
+
+/************************
+Shadows Levels
+************************/
+$level-1: 0 0 15px 0 rgba(46,60,73,0.25);
+$level-2: 2px 2px 15px 0 rgba(46,60,73,0.35);
+$level-3: 2px 2px 15px 0 rgba(46,60,73,0.45);
+
+/************************
+Breakpoints
+************************/
+$sm: 48em; // 768px
+$md: 64em; // 1024px
+$lg: 75em; // 1200px
+$xlg: 94em; // 1500px
+
+/************************
+Vertical BreakPoints
+************************/
+$v-sm: 35.5em; // 568px
+$v-md: 48em; // 768px
+$v-lg: 56em; // 900px
+$v-xlg: 67.5em; // 1080px
+
+/************************
+Grid
+************************/
+$grid-columns: 12 !default;
+$gutter-width: 2rem !default;
+$outer-margin: 1rem !default;
+
+$breakpoints:
+  sm 48em 46rem,
+  md 64em 64rem,
+  lg 75em 71rem,
+  xlg 94em 91rem !default;
+
+$container-max-width: 2540px !default;
+$container-dashboard-max-width: 1500px !default;
+$gutter-compensation: $gutter-width * .5 * -1;
+$half-gutter-width: $gutter-width * .5;
+
+/************************
+Toolbar
+************************/
+$dashboard-header-height: 50px;
+
+/************************
+Transitions
+************************/
+$transition-hover-element: all 0.4s ease-in-out;
+
+/************************
+Modal Overlay
+************************/
+$modal-overlay-color: rgba($color-dark-gray-4, 0.35);
+$modal-overlay-filter: blur(2px);
+
+/************************
+
+/************************
+Toolbars
+************************/
+$border-toolbar: 1px solid rgba($color-white, .3);

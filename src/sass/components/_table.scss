@@ -1,0 +1,38 @@
+.table {
+  text-align: left;
+  background-color: #fefefe;
+  border: 1px solid #333;
+  &__row {
+    padding: 10px;
+    border-bottom: 1px solid #333;
+  }
+  &__data {
+    border-top: 1px solid #333;
+    min-width: 140px;
+  }
+  &__data, th {
+    padding: 5px 15px 5px 10px;
+  }
+  th {
+    padding-left: 10px;
+    user-select: none;
+    cursor: pointer;
+    transition: color  linear .2s;
+    &:hover {
+      color: (lighten(#333, 10%));
+    }
+  }
+}
+
+
+.input {
+  width: 100%;
+  padding: 3px 0;
+  font-size: 14px;
+}
+.toolbar-btn {
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: #000;
+}

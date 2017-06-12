@@ -1,0 +1,217 @@
+/************************
+Buttons
+************************/
+@mixin button-bg($bg) {
+  background: transparent;
+  border: 1px solid $color-white;
+
+  &:hover {
+    background:rgba($bg, .3);
+    transition: all 0.3s ease;
+  }
+  &:active {
+    background:rgba($bg, .3);
+  }
+}
+
+@mixin hover-link($color) {
+  transition: color 0.3s linear;
+
+  &:hover {
+    color: $color;
+    transition: color 0.3s linear;
+  }
+}
+
+@mixin radius($rad) {
+  border-radius: $rad;
+  -webkit-border-radius: $rad;
+  -moz-border-radius: $rad;
+}
+@mixin level-2($color) {
+  box-shadow: 0 0 20px 3px rgba($color, 0.3)
+}
+@mixin level-3($color) {
+  box-shadow: 0 0 50px 0 rgba( darken($color, 10%), 0.5);
+}
+
+/************************
+Breakpoints
+************************/
+@mixin sm-down {
+  @media only screen and (max-width: $sm - 1) {
+    @content;
+  }
+}
+@mixin sm-up {
+  @media only screen and (min-width: $sm) {
+    @content;
+  }
+}
+@mixin md-down {
+  @media only screen and (max-width: $md - 1) {
+    @content;
+  }
+}
+
+@mixin md-up {
+  @media only screen and (min-width: $md) {
+    @content;
+  }
+}
+@mixin lg-down {
+  @media only screen and (max-width: $lg - 1) {
+    @content;
+  }
+}
+
+@mixin lg-up {
+  @media only screen and (min-width: $lg) {
+    @content;
+  }
+}
+
+@mixin xlg-down {
+  @media only screen and (max-width: $xlg - 1) {
+    @content;
+  }
+}
+
+@mixin xlg-up {
+  @media only screen and (min-width: $xlg) {
+    @content;
+  }
+}
+
+/************************
+Vertical Breakpoints
+************************/
+@mixin v-sm-down {
+  @media only screen and (max-height: $v-sm - 1) {
+    @content;
+  }
+}
+@mixin v-sm-up {
+  @media only screen and (min-height: $v-sm) {
+    @content;
+  }
+}
+@mixin v-md-down {
+  @media only screen and (max-height: $v-md - 1) {
+    @content;
+  }
+}
+
+@mixin v-md-up {
+  @media only screen and (min-height: $v-md) {
+    @content;
+  }
+}
+@mixin v-lg-down {
+  @media only screen and (max-height: $v-lg - 1) {
+    @content;
+  }
+}
+
+@mixin v-lg-up {
+  @media only screen and (min-height: $v-lg) {
+    @content;
+  }
+}
+
+@mixin v-xlg-down {
+  @media only screen and (max-height: $v-xlg - 1) {
+    @content;
+  }
+}
+
+@mixin v-xlg-up {
+  @media only screen and (min-height: $v-xlg) {
+    @content;
+  }
+}
+
+/************************
+Icons
+************************/
+@mixin icon {
+  font-family: 'Linearicons';
+
+  /* Enable Ligatures ================ */
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  -o-font-feature-settings: "liga";
+  font-feature-settings: "liga";
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*************************
+Font size px to rem
+*************************/
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size; //Fallback in px
+  font-size: calculateRem($size);
+}
+
+@mixin maintain-aspect-ratio($width, $height) {
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+}
+
+
+/*************************
+Buttons
+*************************/
+@mixin button-primary($color) {
+  background-color: $color;
+  min-width: 150px;
+
+  &:disabled {
+    background: $color-disabled;
+  }
+
+  &.is-active,
+  &:hover {
+    background-color: darken($color, 10%);
+    box-shadow: $level-2;
+  }
+  &:active {
+    background: lighten($color, 5%);
+  }
+}
+@mixin button-secondary($color) {
+  color: $color;
+  border: 1px solid $color;
+
+  &:disabled {
+    background: $color-disabled;
+  }
+  &.is-active,
+  &:hover {
+    color: $color-white;
+    box-shadow: $level-1;
+    background: $color;
+    box-shadow: $level-2;
+  }
+  &:active {
+    color: $color-white;
+    box-shadow: $level-2;
+    background: lighten($color, 5%);
+    box-shadow: $level-2;
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "extends": "airbnb",
+  "settings": {
+    "import/resolver": {
+      "webpack": "webpack/webpack-dev-server.js"
+    }
+  },
+
+  "rules": {
+    "import/no-unresolved": 0,
+    "react/no-array-index-key": 1,
+    "import/extensions": 0,
+    "import/no-extraneous-dependencies": 0,
+    "prefer-arrow-callback": ["error", { "allowNamedFunctions": true }],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+  },
+
+  "globals": {
+    "document": true
+  }
+}

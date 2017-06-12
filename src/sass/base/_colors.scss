@@ -1,0 +1,91 @@
+/************************
+Colors
+************************/
+
+$color-white: #fff;
+
+$color-grapefruit-1: #F76C82;
+$color-grapefruit-2: #EB5463;
+$color-grapefruit-3: #D94452;
+
+$color-bittersweet-1: #FB836F;
+$color-bittersweet-2: #FA6C51;
+$color-bittersweet-3: #E8553E;
+$color-bittersweet-4: #f44336;
+
+$color-sunflower-1: #FBD277;
+$color-sunflower-2: #FDCD56;
+$color-sunflower-3: #F5B945;
+
+$color-grass-1: #B4DF80;
+$color-grass-2: #9ED26A;
+$color-grass-3: #89C053;
+
+$color-mint-1: #61DDBC;
+$color-mint-2: #46CEAC;
+$color-mint-3: #35BA9B;
+
+$color-aqua-1: #66D4F1;
+$color-aqua-2: #4FC0E8;
+$color-aqua-3: #3AADD9;
+
+$color-blue-1: #73B0F4;
+$color-blue-2: #5E9CEA;
+$color-blue-3: #4A88DA;
+$color-blue-4: #0F7FA7;
+
+$color-lavender-1: #B3A4EE;
+$color-lavender-2: #AC92EA;
+$color-lavender-3: #9579DA;
+$color-lavender-4: #8A6BD8;
+
+$color-pink-1: #F199CE;
+$color-pink-2: #EB86BE;
+$color-pink-3: #D56FAC;
+
+$color-light-gray-1: #F4F6F8;
+$color-light-gray-2: #E4E8EB;
+$color-light-gray-3: #CAD0D7;
+$color-light-gray-4: #E0E4E8;
+
+$color-dark-gray-1: #A9B0BB;
+$color-dark-gray-2: #636C77;
+$color-dark-gray-3: #424852;
+$color-dark-gray-4: #383838;
+
+$color-favorite: $color-sunflower-2;
+$color-favorite-hover: $color-sunflower-3;
+
+$color-primary: $color-blue-2;
+$color-primary-darker: $color-blue-3;
+$color-secondary: $color-mint-2;
+$color-secondary-hover: $color-mint-3;
+
+$color-danger: $color-bittersweet-4;
+$color-warning: darken($color-sunflower-3, 20%);
+$color-success: $color-grapefruit-3;
+
+$color-stats-card-bg: #E6E6E6;
+$color-stats-card-border: #ccc;
+
+$color-typo: $color-dark-gray-3;
+$color-typo-medium: $color-dark-gray-2;
+$color-typo-medium-light: $color-dark-gray-1;
+$color-typo-light: $color-white;
+
+$color-disabled: $color-dark-gray-1;
+$color-text-disabled: $color-dark-gray-1;
+
+$color-border: $color-light-gray-3;
+$color-border-transparent: rgba($color-white, 0.3);
+$color-border-darker: $color-light-gray-3;
+
+$color-icon: $color-dark-gray-1;
+$color-icon-darker: $color-dark-gray-2;
+
+$color-gradient-1: linear-gradient(to right,  $color-blue-2 0%, $color-lavender-3 100%);
+$color-gradient-2: linear-gradient(to right, rgba($color-aqua-3, 0.8) 0%, rgba($color-lavender-3, 0.8) 100%);
+$color-gradient-3: linear-gradient(to right, rgba($color-aqua-3, 0.3) 0%, rgba($color-lavender-3, 0.3) 100%);;
+$color-gradient-4: linear-gradient(to right, rgba($color-mint-2, 1) 0%, rgba($color-blue-2, 1) 100%);
+
+$color-bg: $color-light-gray-2;
