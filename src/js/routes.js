@@ -5,8 +5,9 @@ import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 
 import Contacts from './pages/contacts';
 import Main from './pages/main';
+import Images from './pages/images';
+import NotFound from './pages/notFound';
 import Menu from './elements/menu/menu';
-
 
 class Router extends Component {
 
@@ -17,11 +18,15 @@ class Router extends Component {
     render() {
         return (
           <BrowserRouter>
-              <div>
-                  <Menu/>
+            <div>
+                <Menu/>
+                <Switch>
                   <Route exact path='/' component={Main}/>
                   <Route path='/contacts' component={Contacts}/>
-              </div>
+                  <Route path='/images' component={Images}/>
+                  <Route component={NotFound}/>
+                </Switch>
+            </div>
           </BrowserRouter>
         );
     }

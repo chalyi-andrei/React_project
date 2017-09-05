@@ -3,10 +3,10 @@ import React, { Component } from 'react';
 import Table from '../elements/table/table';
 
 
-var headers = [
+let headers = [
     "Book", "Author", "Language", "Published", "Sales"
 ];
-var data = [
+let data = [
     ["The Lord of the Rings", "J. R. R. Tolkien",
         "English", "1954–1955", "150 million"],
     ["Le Petit Prince (The Little Prince)", "Antoine deSaint-Exupéry",
@@ -27,14 +27,6 @@ class Main extends Component {
 
   constructor(props) {
     super(props);
-  }
-
-  handleClick() {
-    alert('main');
-  }
-
-  toogleSearch2() {
-    alert('main page');
   }
 
   render() {

@@ -40,3 +40,95 @@ body, html {
     }
   }
 }
+
+.images {
+  width: 800px;
+  margin: 0 auto;
+  &__item {
+    width: 200px;
+    display: inline-block;
+    text-align: center;
+  }
+
+  &__title {
+    margin: 3px 0 20px;
+    text-align: center;
+  }
+}
+
+.image {
+  box-sizing: border-box;
+  width: 100%;
+  height: 450px;
+  margin: 5px;
+  cursor: pointer;
+  &--small {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.contacts {
+  font-family: Arial, sans-serif;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #11b7e6;
+  box-sizing: border-box;
+  padding: 25px;
+  &__caption {
+    padding: 20px 10px;
+    margin-bottom: 20px;
+  }
+  &__title {
+    font-size: 24px;
+    color: #fff;
+    font-weight: 100;
+    line-height: 1.4;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  &__notice {
+    display: block;
+    font-size: 18px;
+    width: 100%;
+    padding-left: 60px;
+  }
+  &__img {
+    margin-right: 10px;
+    width: 50px;
+  }
+  &__input {
+    width: calc(100% - 25px);
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    height: 25px;
+    font-size: 16px;
+    &::-webkit-input-placeholder {
+      color: #3470d0;
+      opacity: .8;
+    }
+  }
+  &__textarea {
+    padding: 5px 10px;
+    width: calc(100% - 22px);
+    resize: none;
+    margin-bottom: 10px;
+    font-size: 16px;
+    &::-webkit-input-placeholder {
+      color: #3470d0;
+      opacity: .8;
+    }
+  }
+  &__btn {
+    cursor: pointer;
+    width: 100%;
+    height: 40px;
+    padding: 5px;
+    color: #fff;
+    background-color: #3470d0;
+    border: none;
+    font-size: 18px;
+  }
+}

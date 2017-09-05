@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Toolbar from '../toolbar/toolbar';
+import axios from 'axios';
 
 class Table extends Component {
 
@@ -12,6 +13,7 @@ class Table extends Component {
             descending: false,
             edit: null, // [row index, cell index]
             search: false,
+            img: ''
         }
     }
 
@@ -31,6 +33,14 @@ class Table extends Component {
                 search: true,
             });
         }
+    }
+
+    componentDidMount() {
+        axios.get('https://jsonplaceholder.typicode.com/photos').then((resp) => {
+            this.setState({
+                img: resp.data[0]['url']
+            })
+        });
     }
 
     renderSearch() {
@@ -103,63 +113,64 @@ class Table extends Component {
     }
 
     render() {
-      return (
-        <div>
-          <Toolbar handleClick={(e) => this.toggleSearch(e)}/>
-          <table className="table">
-            <thead onClick={(e) => this.sort(e)}>
-            <tr>
-                {
-                    this.props.headers.map((item, key) => {
-                        return (
-                            <th key = {key}>{item}</th>
-                        )
-                    })
-                }
-            </tr>
-            </thead>
-            <tbody onDoubleClick={(e) => this.showEditor(e)}>
-            {
-                this.renderSearch()
-            }
-            {
-                this.state.data.map((row, rowIndex) => {
-                    return (
-                        <tr className="table__row" key={rowIndex}>
-                            {
-                                row.map((cell, cellIndex) => {
-                                    var content = cell,
-                                        edit = this.state.edit;
+        return (
+            <div>
+                <Toolbar handleClick={(e) => this.toggleSearch(e)}/>
+                <table className="table">
+                    <thead onClick={(e) => this.sort(e)}>
+                    <tr>
+                        {
+                            this.props.headers.map((item, key) => {
+                                return (
+                                    <th key = {key}>{item}</th>
+                                )
+                            })
+                        }
+                    </tr>
+                    </thead>
+                    <tbody onDoubleClick={(e) => this.showEditor(e)}>
+                    {
+                        this.renderSearch()
+                    }
+                    {
+                        this.state.data.map((row, rowIndex) => {
+                            return (
+                                <tr className="table__row" key={rowIndex}>
+                                    {
+                                        row.map((cell, cellIndex) => {
+                                            var content = cell,
+                                                edit = this.state.edit;
 
-                                    if (edit && edit.row === rowIndex && edit.cell === cellIndex) {
-                                        content =
-                                            <form onSubmit={(e) => this.save(e)}>
-                                                <input type="text" defaultValue={content} className="input"/>
-                                            </form>
+                                            if (edit && edit.row === rowIndex && edit.cell === cellIndex) {
+                                                content =
+                                                    <form onSubmit={(e) => this.save(e)}>
+                                                        <input type="text" defaultValue={content} className="input"/>
+                                                    </form>
+                                            }
+                                            return (
+                                                <td key={cellIndex}
+                                                    className="table__data"
+                                                    data-row={rowIndex}>
+                                                    {content}
+                                                </td>
+                                            )
+                                        })
                                     }
-                                    return (
-                                        <td key={cellIndex}
-                                            className="table__data"
-                                            data-row={rowIndex}>
-                                            {content}
-                                        </td>
-                                    )
-                                })
-                            }
-                        </tr>
-                    )
-                })
-            }
-            </tbody>
-          </table>
-        </div>
-      );
+                                </tr>
+                            )
+                        })
+                    }
+                    </tbody>
+                </table>
+                <img src={this.state.img}/>
+            </div>
+        );
     }
 
 }
 
 Table.defaultProps = {
-    headers: ['item 1', 'item 2', 'item 3']
+    headers: ['Roma', 'Andrey']
 }
 
 export default Table;
